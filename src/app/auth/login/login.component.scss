@@ -1,0 +1,14 @@
+.login-container{
+  width: 45%;
+  margin: auto;
+  padding: 20px 30px;
+  box-shadow: rgb(0 0 0 / 16%) 0 0.0625rem 0.25rem 0;
+  border-radius: 10px;
+  background: white;
+}
+
+@media (max-width: 1000px) {
+  .login-container {
+    width: 85%;
+  }
+}

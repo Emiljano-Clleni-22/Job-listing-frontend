@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-2">
+    <h3 class="page-main-heading">Profile</h3>
+  </div>
+</div>
+
+<div class="profile-details-container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <form autocomplete="off" [formGroup]="form" *ngIf="form">
+        <div class="mb-2 form-group">
+          <app-form-control>
+            <label for="Name">Name</label>
+            <input type="text" id="Name" class="form-control" [formControlName]="'name'">
+          </app-form-control>
+        </div>
+        <div class="mb-2 form-group">
+          <app-form-control>
+            <label for="Email">Email</label>
+            <input type="text" id="Email" class="form-control" [formControlName]="'email'">
+          </app-form-control>
+        </div>
+        <div class="mb-2 form-group">
+          <app-form-control>
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="text" id="PhoneNumber" class="form-control" [formControlName]="'phoneNumber'">
+          </app-form-control>
+        </div>
+        <div class="d-flex justify-content-center mb-5">
+          <button class="primary-button" (click)="onSaveClicked()">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h3>Favourite Jobs</h3>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th style="width: 50%">Title</th>
+          <th style="width: 50%">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let job of favouriteJobs; let index=index">
+          <td>{{job.title}}</td>
+          <td>{{job.description}}</td>
+        </tr>
+        <tr *ngIf="favouriteJobs && favouriteJobs.length === 0">
+          <td colspan="2">
+            <span>No favourite job found</span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h3>Applied Jobs</h3>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th style="width: 50%">Title</th>
+          <th style="width: 50%">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let job of appliedJobs; let index=index">
+          <td>{{job.title}}</td>
+          <td>{{job.description}}</td>
+        </tr>
+        <tr *ngIf="appliedJobs && appliedJobs.length === 0">
+          <td colspan="2">
+            <span>No applied job found</span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

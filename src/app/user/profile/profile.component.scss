@@ -1,0 +1,10 @@
+.profile-details-container {
+  width: 45%;
+  margin: auto;
+}
+
+@media (max-width: 1000px) {
+  .profile-details-container {
+    width: 100%;
+  }
+}

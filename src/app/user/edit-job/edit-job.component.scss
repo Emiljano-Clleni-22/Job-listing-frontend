@@ -1,0 +1,25 @@
+.edit-job-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+
+  > div {
+    width: 45%;
+    padding: 30px;
+    box-shadow: rgb(0 0 0 / 16%) 0 0.0625rem 0.25rem 0;
+    border-radius: 10px;
+    background: white;
+  }
+}
+
+@media (max-width: 1000px) {
+  .edit-job-container > div {
+    width: 85%;
+  }
+}
